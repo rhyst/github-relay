@@ -8,7 +8,6 @@ import time
 from flask import Flask, request
 from flask_cors import CORS
 import jwt
-import json
 
 # Load the config file
 config = None
@@ -49,7 +48,7 @@ def relay():
         try:
             # Check that they have the correct permissions on the repo
             for repo in response.json()["repositories"]:
-                if repo['id'] == REPO_ID and repo['permissions']['push']:
+                if str(repo['id']) == str(REPO_ID) and repo['permissions']['push']:
                     # If they do create an installation token
                     pem_file = open(PEM_FILE_LOCATION, "r")
                     encoded_jwt = jwt.encode({'iat': int(round(time.time())), 'exp': int(round(time.time()) + 60), 'iss': '6509'}, pem_file.read(), algorithm='RS256')
