@@ -12,7 +12,7 @@ import json
 
 # Load the config file
 config = None
-with open('../config.json') as json_data_file:
+with open('config.json') as json_data_file:
     config = json.load(json_data_file)
 
 if config is None:

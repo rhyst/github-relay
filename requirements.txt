@@ -13,6 +13,7 @@ itsdangerous==0.24
 Jinja2==2.10
 kombu==4.1.0
 MarkupSafe==1.0
+pkg-resources==0.0.0
 pyasn1==0.3.7
 pycparser==2.18
 PyJWT==1.5.3
@@ -20,5 +21,6 @@ pytz==2017.3
 requests==2.18.4
 six==1.11.0
 urllib3==1.22
+uWSGI==2.0.15
 vine==1.1.4
 Werkzeug==0.12.2
