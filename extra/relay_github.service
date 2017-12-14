@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to run github relay
+After=network.target
+
+[Service]
+User=username
+Group=www-data
+WorkingDirectory=/path/to/relay/
+Environment="PATH=/path/to/venv/bin"
+ExecStart=/path/to/uwsgi --ini wsgi.ini
+
+[Install]
+WantedBy=multi-user.target
