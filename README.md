@@ -46,7 +46,7 @@ The config.json file should be customised. It contains the following:
 It should be easy to modify to your usage but by default it accepts post requests with a json of the form:
 
     {
-        token: "sometoke"
+        token: "sometoken"
         url: "some/path/to/a/file.md"
     }
 
